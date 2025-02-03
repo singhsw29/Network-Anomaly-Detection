@@ -14,7 +14,6 @@ st.title("Binary Classification Prediction for Network Intrusion")
 # Create user input fields for each feature
 st.subheader("Input the following network connection features:")
 
-
 features = {
 'Duration': st.number_input(
     'Duration (seconds)', min_value=0.0, step=1.0, 
