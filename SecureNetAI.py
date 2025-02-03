@@ -14,22 +14,6 @@ st.title("Binary Classification Prediction for Network Intrusion")
 # Create user input fields for each feature
 st.subheader("Input the following network connection features:")
 
-def load_model(model_path):
-    with gzip.open(model_path, 'rb') as f:
-        model = pickle.load(f)
-    return model
-
-# Load your models
-binary_model = load_model("C:\\Users\\Swati\\Downloads\\DS_PortfolioProject_NetworkAnomalyDetection\\best_binary_classification_model.pkl")
-multi_model = load_model("C:\\Users\\Swati\\Downloads\\DS_PortfolioProject_NetworkAnomalyDetection\\best_multi_classification_model.pkl")
-
-def binary_classification_prediction(input_data):
-    prediction = binary_model.predict(input_data)
-    return prediction[0]  # Assuming binary classification returns a single value
-
-def multi_classification_prediction(input_data):
-    prediction = multi_model.predict(input_data)
-    return prediction[0]  # Assuming multi-class returns a single value
 
 features = {
 'Duration': st.number_input(
